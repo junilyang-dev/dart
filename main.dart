@@ -1,10 +1,13 @@
+//Without null safety
+bool isEmpty(String? str) => str?.length == 0;
+
 void main() {
-  var test;//Type: dynamic
-  test = "test";
-  test = 1;
-  test = true;
-  var name = 'nico';
-  print("Hi! My name is $name.toUpperCase() !");
-  print(name.toUpperCase());
-  print("Hi! My name is ${name.toUpperCase()} !");
+  isEmpty(null);
+  String? junil = 'arum';
+  junil = null;
+  if(junil != null){
+    junil.isNotEmpty;
+  }
+  junil?.isNotEmpty;
+  junil?.isEmpty;
 }
