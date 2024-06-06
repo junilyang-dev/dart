@@ -1,13 +1,10 @@
-//Without null safety
-bool isEmpty(String? str) => str?.length == 0;
+enum Transmition { auto, manual }
+
+class Car {
+    Transmition transmition;
+    Car(this.transmition);
+}
 
 void main() {
-  isEmpty(null);
-  String? junil = 'arum';
-  junil = null;
-  if(junil != null){
-    junil.isNotEmpty;
-  }
-  junil?.isNotEmpty;
-  junil?.isEmpty;
+  var car = Car(Transmition.auto);
 }
