@@ -40,4 +40,10 @@ void main() {
     List<int> numbers1 = [0,1];
     numbers1.add(2);
     print(numbers1);
+
+  //String interpolation
+  var nm = "junil";
+  var ag =  10;
+  var greeting = 'Hello everyone, my name is $nm and I\'m ${ag+10}, nice to meet you!';
+  print(greeting);
 }
