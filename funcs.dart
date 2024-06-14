@@ -51,6 +51,14 @@ typedef ListOfInts = List<int>;
   return reversed.toList();
 }
 
+String sayHi(Map<String, String> userInfo){
+  return "Hi ${userInfo['name']}";
+}
+typedef UserInfo = Map<String, String>;
+String sayHi1(UserInfo userInfo){
+  return "Hi ${userInfo['name']}";
+}
+
 void main(){
   sayHello('arum',9,'korea');
   print(sayHello1('junil'));
@@ -68,4 +76,9 @@ void main(){
   print(name);
   print(reverseListOfNumbers([1,2,3]));
   print(reverseListOfNumbers1([4,5,6]));
+
+  print(sayHi({"name":"arum"}));
+  print(sayHi({"sfdsd":"arum"}));
+  print(sayHi1({"name":"arum"}));
+  print(sayHi1({"sfdsd":"arum"}));
 }
