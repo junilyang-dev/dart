@@ -59,6 +59,11 @@ String sayHi1(UserInfo userInfo){
   return "Hi ${userInfo['name']}";
 }
 
+class Player {
+  String name = 'arum';
+  int xp = 1500;
+}
+
 void main(){
   sayHello('arum',9,'korea');
   print(sayHello1('junil'));
@@ -81,4 +86,9 @@ void main(){
   print(sayHi({"sfdsd":"arum"}));
   print(sayHi1({"name":"arum"}));
   print(sayHi1({"sfdsd":"arum"}));
+
+  var player = Player();
+  print(player.name);
+  player.name='junil';
+  print(player.name);
 }
