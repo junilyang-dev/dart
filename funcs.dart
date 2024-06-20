@@ -58,8 +58,12 @@ String sayHi1(UserInfo userInfo) {
 enum Team { red, blue }
 
 enum XPLevel { beginner, medium, pro }
-  
-class Player {
+
+abstract class Human {
+  void walk();
+}
+
+class Player extends Human{
   String name;
   int age;
   XPLevel xp;
@@ -88,6 +92,16 @@ class Player {
   }
   void sayHelloTeamPlayer(){
     print("Hi my name is $name, my team is $team, my age is $age, and my xp is $xp");
+  }
+
+  void walk(){
+    print('im walking');
+  }
+}
+
+class Coach extends Human {
+  void walk() {
+    print('the coach is walking');
   }
 }
 
